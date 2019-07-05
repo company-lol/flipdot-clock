@@ -1,0 +1,11 @@
+; config.ini
+
+[FLIPDOT_SERVER]
+COLUMNS = 96
+ROWS = 16
+URL = http://localhost:8080/api/dots
+SIMULATOR = False
+
+[DISPLAY]
+FONT = 0-4-b-3-0
+CLOCK_PATTERN = %I:%M:%S
