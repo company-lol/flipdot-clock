@@ -13,13 +13,17 @@ from os import path
 import sys
 
 async def clock():
+    old_time = time.strftime(time_format)
     while True:
         new_time = time.strftime(time_format)
+
         if new_time != old_time:
-            print(new_time)
             logging.debug(new_time)
+            print("Sending new time: " + new_time)
+            old_time = new_time
             sign.write_text(new_time, alignment="centre",
                             font_name=display_font, fit=True)
+
 
 async def main():
     res = await asyncio.gather(clock())
@@ -49,10 +53,6 @@ if __name__ == "__main__":
 
     time_format = config.get('DISPLAY', 'CLOCK_PATTERN')
 
-    
-
     old_time = time.strftime(time_format)
     
     clock1 = asyncio.run(main())
-    print()
-    print(f"clock: {clock1}")
