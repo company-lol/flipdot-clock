@@ -16,9 +16,10 @@ async def clock():
     while True:
         new_time = time.strftime(time_format)
         if new_time != old_time:
-                logging.debug(new_time)
-                sign.write_text(new_time, alignment="centre",
-                                font_name=display_font, fit=True)
+            print(new_time)
+            logging.debug(new_time)
+            sign.write_text(new_time, alignment="centre",
+                            font_name=display_font, fit=True)
 
 async def main():
     res = await asyncio.gather(clock())
@@ -46,7 +47,7 @@ if __name__ == "__main__":
 
     display_font = config.get('DISPLAY', 'FONT')
 
-    time_format = "%I:%M" #config.get('DISPLAY', 'CLOCK_PATTERN')
+    time_format = config.get('DISPLAY', 'CLOCK_PATTERN')
 
     
 

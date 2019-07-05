@@ -8,4 +8,4 @@ SIMULATOR = False
 
 [DISPLAY]
 FONT = 0-4-b-3-0
-CLOCK_PATTERN = %I:%M:%S
+CLOCK_PATTERN = %%I:%%M:%%S
