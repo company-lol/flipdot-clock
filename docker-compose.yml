@@ -6,7 +6,7 @@ services:
       dockerfile: Dockerfile
     container_name: flipdot-clock
     restart: unless-stopped
-        volumes:
+    volumes:
       - /etc/timezone:/etc/timezone:ro
       - ./config.ini:/app/config.ini      
     environment:
