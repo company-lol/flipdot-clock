@@ -1,0 +1,10 @@
+version: '2'
+services:
+  flipdot-clock:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: flipdot-clock
+    restart: unless-stopped
+    volumes:
+      - ./config.ini:/app/config.ini
