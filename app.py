@@ -54,5 +54,9 @@ if __name__ == "__main__":
     time_format = config.get('DISPLAY', 'CLOCK_PATTERN')
 
     old_time = time.strftime(time_format)
+    sign.write_text("Booting up clock", alignment="centre",
+                            font_name=display_font, fit=True, scroll=True)
+    sign.write_text(old_time, alignment="centre",
+                            font_name=display_font, fit=True, scroll=False)
     
     clock1 = asyncio.run(main())
