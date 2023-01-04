@@ -22,7 +22,7 @@ async def clock():
             print("Sending new time: " + new_time)
             old_time = new_time
             sign.write_text(new_time, alignment="centre",
-                            font_name=display_font, fit=True, sroll=False)
+                            font_name=display_font, fit=True, scroll=False)
 
 
 async def main():
