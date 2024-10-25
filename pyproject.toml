@@ -1,0 +1,12 @@
+[project]
+name = "flipdot-clock"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "flipdotapi",
+]
+
+[tool.uv.sources]
+flipdotapi = { git = "https://github.com/company-lol/flipdotapi.git" }
